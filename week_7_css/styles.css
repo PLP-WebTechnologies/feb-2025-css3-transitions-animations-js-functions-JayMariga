@@ -1,0 +1,43 @@
+/* Transition effect for the button */
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Scale the button on hover */
+  }
+  
+  /* Adding keyframe animation */
+  @keyframes pulse {
+    0% { background-color: #4CAF50; }
+    50% { background-color: #45a049; }
+    100% { background-color: #4CAF50; }
+  }
+  
+  .button.animated {
+    animation: pulse 1s infinite;
+  }
+  
+  /* Rescale images inside product containers */
+.product img {
+    max-width: 100%;   /* Ensures the image never exceeds its container's width */
+    height: auto;      /* Maintains aspect ratio */
+    display: block;    /* Removes any unexpected spacing below the image */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  }
+  
+  /* Optionally, set a fixed container size if needed */
+  .product {
+    width: 300px;      /* or use percentage like 100% for responsiveness */
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
